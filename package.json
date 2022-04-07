@@ -1,0 +1,13 @@
+{
+  "name": "file-metadata-microservice",
+  "version": "1.0.0",
+  "description": "Sistema de Micro serviço para upload de arquivos e envio de metadados em json, feito em NodeJS utilizando express ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": ["javascript", "nodejs", "express", "multer", "dotenv", "cors"],
+  "author": "github.com/joaov1ct0r",
+  "license": "ISC"
+}
