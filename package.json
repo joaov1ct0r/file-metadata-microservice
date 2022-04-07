@@ -7,7 +7,17 @@
   "scripts": {
     "start": "node src/index.js"
   },
-  "keywords": ["javascript", "nodejs", "express", "multer", "dotenv", "cors"],
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "express",
+    "multer",
+    "dotenv",
+    "cors"
+  ],
   "author": "github.com/joaov1ct0r",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
