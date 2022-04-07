@@ -8,3 +8,5 @@ const handleFile = (req, res) => {
         });
     }
 };
+
+export default handleFile;
