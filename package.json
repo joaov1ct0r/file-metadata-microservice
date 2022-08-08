@@ -1,7 +1,7 @@
 {
   "name": "file-metadata-microservice",
   "version": "1.0.0",
-  "description": "Sistema de Micro serviço para upload de arquivos e envio de metadados em json, feito em NodeJS utilizando express ",
+  "description": "Sistema de Micro serviço para upload de arquivos e envio de metadados em json, feito em NodeJS utilizando express.",
   "main": "index.js",
   "type": "module",
   "scripts": {
