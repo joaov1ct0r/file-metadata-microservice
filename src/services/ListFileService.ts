@@ -1,11 +1,11 @@
 import BadRequestError from "../errors/BadRequestError";
 
-import IFiles from "../interfaces/IFiles";
+import { Express } from "express";
 
 export default class ListFileService {
-  public execute(file: object): IFiles {
+  public execute(file: Express.Multer.File | undefined): Express.Multer.File {
     if (!file) throw new BadRequestError("Arquivo não encontrado!");
 
-    return file as IFiles;
+    return file;
   }
 }

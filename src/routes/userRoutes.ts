@@ -2,12 +2,20 @@ import express from "express";
 
 import multer from "multer";
 
-import { handleFile } from "../controllers/userController.js";
+import ListFileController from "../controllers/ListFileController";
 
-const upload = multer();
+import IListFileController from "../interfaces/IListFileController";
 
-const userRouter = express.Router();
+const upload: multer.Multer = multer();
 
-userRouter.post("/fileanalyse", upload.single("file"), handleFile);
+const userRouter: express.Router = express.Router();
+
+const listFileController: IListFileController = new ListFileController();
+
+userRouter.post(
+  "/fileanalyse",
+  upload.single("file"),
+  listFileController.handle
+);
 
 export default userRouter;

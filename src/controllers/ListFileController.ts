@@ -1,21 +1,17 @@
-import { Response } from "express";
-
-import IReq from "../interfaces/IReq";
+import { Request, Response, Express } from "express";
 
 import ListFileService from "../services/ListFileService";
 
 import IListFileService from "../interfaces/IListFileService";
 
-import IFiles from "../interfaces/IFiles";
-
 export default class ListFileController {
-  public async handle(req: IReq, res: Response): Promise<Response> {
-    const file: object = req.file;
+  public async handle(req: Request, res: Response): Promise<Response> {
+    const file: Express.Multer.File | undefined = req.file;
 
     const listFileService: IListFileService = new ListFileService();
 
     try {
-      const files: IFiles = listFileService.execute(file);
+      const files: Express.Multer.File = listFileService.execute(file);
 
       return res.status(200).json({
         name: files.originalname,

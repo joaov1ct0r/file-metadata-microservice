@@ -1,5 +1,5 @@
-import IFiles from "./IFiles";
+import { Express } from "express";
 
 export default interface IListFileService {
-  execute(file: object): IFiles;
+  execute(file: Express.Multer.File | undefined): Express.Multer.File;
 }
